@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <title>SolarOS — ERP Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="SolarOS dashboard">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.64 5.64l2.12 2.12M16.24 16.24l2.12 2.12M18.36 5.64l-2.12 2.12M7.76 16.24l-2.12 2.12"/><circle cx="12" cy="12" r="4"/></svg>
+        </span>
+        <span>SolarOS</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-page="Dashboard">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-page="Customers">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Customers</span>
+        </button>
+        <button class="nav-item" data-page="Projects">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h6M9 13h6M9 17h6"/></svg>
+          <span>Projects</span>
+          <span class="nav-count">12</span>
+        </button>
+        <button class="nav-item" data-page="Quotations">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+          <span>Quotations</span>
+        </button>
+        <button class="nav-item" data-page="Inventory">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7L12 12l8.7-5M12 22V12"/></svg>
+          <span>Inventory</span>
+        </button>
+        <button class="nav-item" data-page="Service">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.3-3.3a6 6 0 0 1-7.6 7.6l-6.3 6.3a2.1 2.1 0 0 1-3-3l6.3-6.3a6 6 0 0 1 7.6-7.6z"/></svg>
+          <span>Service</span>
+        </button>
+
+        <p class="nav-label nav-label-manage">Manage</p>
+        <button class="nav-item" data-page="Analytics">
+          <svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 16l4-5 4 3 5-7"/></svg>
+          <span>Analytics</span>
+        </button>
+        <button class="nav-item" data-page="Settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06-1.91 1.91-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V20h-2.7v-.09A1.65 1.65 0 0 0 11.2 18.4a1.65 1.65 0 0 0-1.82.33l-.06.06-1.91-1.91.06-.06A1.65 1.65 0 0 0 7.8 15a1.65 1.65 0 0 0-1.51-1H6v-2.7h.09A1.65 1.65 0 0 0 7.6 10.2a1.65 1.65 0 0 0-.33-1.82l-.06-.06L9.12 6.4l.06.06A1.65 1.65 0 0 0 11 6.8a1.65 1.65 0 0 0 1-1.51V5h2.7v.09A1.65 1.65 0 0 0 15.8 6.6a1.65 1.65 0 0 0 1.82-.33l.06-.06 1.91 1.91-.06.06A1.65 1.65 0 0 0 19.2 10a1.65 1.65 0 0 0 1.51 1h.29v2.7h-.09A1.65 1.65 0 0 0 19.4 15z"/></svg>
+          <span>Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-avatar">AR</div>
+        <div class="user-meta">
+          <strong>Amit R.</strong>
+          <span>Administrator</span>
+        </div>
+        <button class="icon-button more-button" aria-label="Account menu">•••</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="globalSearch" type="search" placeholder="Search customers, projects..." aria-label="Search" />
+          <kbd>⌘ K</kbd>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button notification-button" aria-label="Notifications">
+            <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+            <span class="notification-dot"></span>
+          </button>
+          <button class="create-button" id="createButton">
+            <span>+</span> New project
+          </button>
+        </div>
+      </header>
+
+      <div class="dashboard">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">MONDAY, NOVEMBER 21</p>
+            <h1>Good morning, Amit</h1>
+          </div>
+          <label class="period-select">This month
+            <select aria-label="Reporting period">
+              <option>This month</option>
+              <option>Last month</option>
+              <option>This quarter</option>
+            </select>
+          </label>
+        </div>
+
+        <section class="kpi-grid" aria-label="Business overview">
+          <article class="kpi-card">
+            <div class="kpi-heading"><span>Revenue</span><span class="trend positive">↗ 12.5%</span></div>
+            <strong>$284.6K</strong>
+            <p>vs. $252.9K last month</p>
+            <div class="spark-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-heading"><span>Active projects</span><span class="trend positive">↗ 8.2%</span></div>
+            <strong>24</strong>
+            <p>6 due this month</p>
+            <div class="progress-track"><span style="width:68%"></span></div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-heading"><span>Pipeline value</span><span class="trend positive">↗ 18.3%</span></div>
+            <strong>$428.2K</strong>
+            <p>14 open quotations</p>
+            <div class="mini-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-heading"><span>Installed capacity</span><span class="trend positive">↗ 9.1%</span></div>
+            <strong>1.84 MW</strong>
+            <p>Across 18 systems</p>
+            <div class="capacity-ring"><span>74%</span></div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel revenue-panel">
+            <div class="panel-heading">
+              <div><h2>Revenue overview</h2><p>Monthly revenue performance</p></div>
+              <button class="period-chip">2026 <span>⌄</span></button>
+            </div>
+            <div class="chart-summary"><strong>$284,600</strong><span class="trend positive">+12.5%</span></div>
+            <div class="chart" aria-label="Revenue chart">
+              <div class="chart-y"><span>$300K</span><span>$200K</span><span>$100K</span><span>$0</span></div>
+              <div class="chart-area">
+                <div class="grid-lines"><i></i><i></i><i></i><i></i></div>
+                <svg viewBox="0 0 700 180" preserveAspectRatio="none" aria-hidden="true">
+                  <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#77b85a" stop-opacity=".22"/><stop offset="100%" stop-color="#77b85a" stop-opacity=".02"/></linearGradient></defs>
+                  <path class="area-path" d="M0 145 C55 138,65 120,115 125 S185 102,230 108 S300 78,350 88 S420 52,470 64 S535 34,580 48 S650 18,700 28 L700 180 L0 180Z"/>
+                  <path class="line-path" d="M0 145 C55 138,65 120,115 125 S185 102,230 108 S300 78,350 88 S420 52,470 64 S535 34,580 48 S650 18,700 28"/>
+                  <circle cx="580" cy="48" r="5"/>
+                </svg>
+                <div class="chart-x"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel pipeline-panel">
+            <div class="panel-heading">
+              <div><h2>Sales pipeline</h2><p>Open opportunities</p></div>
+              <button class="text-button">View all</button>
+            </div>
+            <div class="pipeline-total"><strong>$428.2K</strong><span>14 opportunities</span></div>
+            <div class="pipeline-list">
+              <div class="pipeline-row"><div><span class="stage-dot lead"></span><b>Qualified leads</b></div><strong>$126.4K</strong><span class="bar"><i style="width:78%;background:#7ba66b"></i></span></div>
+              <div class="pipeline-row"><div><span class="stage-dot survey"></span><b>Survey scheduled</b></div><strong>$98.8K</strong><span class="bar"><i style="width:61%;background:#d4ad55"></i></span></div>
+              <div class="pipeline-row"><div><span class="stage-dot quote"></span><b>Quotation sent</b></div><strong>$142.5K</strong><span class="bar"><i style="width:88%;background:#6d9d80"></i></span></div>
+              <div class="pipeline-row"><div><span class="stage-dot negotiation"></span><b>Negotiation</b></div><strong>$60.5K</strong><span class="bar"><i style="width:38%;background:#b0a184"></i></span></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel projects-panel">
+            <div class="panel-heading">
+              <div><h2>Active projects</h2><p>Projects requiring attention</p></div>
+              <button class="text-button">View all projects</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Project</th><th>Customer</th><th>Status</th><th>Progress</th><th>Due date</th></tr></thead>
+                <tbody>
+                  <tr><td><b>#PR-1048</b><span>8.4 kW Residential</span></td><td>Greenwood Homes</td><td><span class="status installation">Installation</span></td><td><div class="table-progress"><span><i style="width:72%"></i></span><b>72%</b></div></td><td>Nov 24</td></tr>
+                  <tr><td><b>#PR-1042</b><span>125 kW Commercial</span></td><td>Meridian Logistics</td><td><span class="status survey">Survey</span></td><td><div class="table-progress"><span><i style="width:38%"></i></span><b>38%</b></div></td><td>Nov 28</td></tr>
+                  <tr><td><b>#PR-1039</b><span>18 kW Residential</span></td><td>Harbor View LLC</td><td><span class="status permit">Permit</span></td><td><div class="table-progress"><span><i style="width:54%"></i></span><b>54%</b></div></td><td>Dec 02</td></tr>
+                  <tr><td><b>#PR-1035</b><span>42 kW Industrial</span></td><td>Northstar Foods</td><td><span class="status inspection">Inspection</span></td><td><div class="table-progress"><span><i style="width:88%"></i></span><b>88%</b></div></td><td>Dec 05</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel tasks-panel">
+            <div class="panel-heading">
+              <div><h2>Upcoming tasks</h2><p>Next 7 days</p></div>
+              <button class="icon-button task-add" aria-label="Add task">+</button>
+            </div>
+            <div class="task-list">
+              <label class="task"><input type="checkbox"><span class="custom-check"></span><span><b>Site survey — Greenwood</b><small>Today · 10:30 AM</small></span></label>
+              <label class="task"><input type="checkbox"><span class="custom-check"></span><span><b>Submit permit — Harbor View</b><small>Today · 2:00 PM</small></span></label>
+              <label class="task"><input type="checkbox"><span class="custom-check"></span><span><b>Review Meridian quotation</b><small>Tomorrow · 9:00 AM</small></span></label>
+              <label class="task"><input type="checkbox"><span class="custom-check"></span><span><b>Northstar final inspection</b><small>Nov 23 · 11:30 AM</small></span></label>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+      <form class="modal" id="projectForm">
+        <div class="modal-heading"><div><p>NEW PROJECT</p><h2>Create project</h2></div><button type="button" class="icon-button" id="closeModal" aria-label="Close">×</button></div>
+        <label>Project name<input name="name" required placeholder="e.g. Riverside residence"></label>
+        <label>Customer<input name="customer" required placeholder="Customer or company name"></label>
+        <div class="modal-row"><label>System size<input name="size" type="number" placeholder="kW"></label><label>Stage<select name="stage"><option>Qualified lead</option><option>Site survey</option><option>Quotation</option></select></label></div>
+        <div class="modal-actions"><button type="button" class="secondary-button" id="cancelModal">Cancel</button><button type="submit" class="create-button">Create project</button></div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
